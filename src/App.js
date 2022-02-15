@@ -1,29 +1,25 @@
-// import Hero from './Components/Hero';
+import React from 'react';
 import Indexbody from './Components/Indexbody';
 import Navbar from './Components/Navbar';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
+import LogIn from './Components/LogIn';
 
 function App() {
   return (
-    <>
-    {/* <Navbar/> */}
-    <Indexbody/>
-    <Router>
-    <Switch>
-          <Route exact path="/">
-            <index-body />
-          </Route>
-          <Route path="/about">
-            <Navbar />
-          </Route>
-        </Switch>
-    </Router>
-    </>
+    <LogIn/>
+    // <Router>
+    //     <Routes>
+    //       {/* <Route exact path="/" element={<Indexbody/>}/> */}
+    //       <Route exact path="/" element={<LogIn/>}/>
+    //       {/* <Route exact path="/recovery-password" element={<RecoveryPassword/>}/>
+    //       <Route path="*" element={<NotFound/>}/> */}
+    //     </Routes>
+    // </Router>
   );
 }
 

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import '../index-body.css';
-import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import PlanetOne from '../Images/planet.svg';
 import PlanetTwo from '../Images/planet-2.svg';
 import PlanetThree from '../Images/planet-3.svg';
