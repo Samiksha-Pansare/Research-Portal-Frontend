@@ -11,6 +11,7 @@ import LogIn from './Components/LogIn';
 import Footer from './Components/Footer';
 import UpcomingConferences from './Components/UpcomingConferences';
 import Chat from './Components/Chat';
+import Papers from './Components/Papers';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/login" element={<LogIn/>}/>
           <Route exact path="/upcomingconf" element={<><Navbar/><UpcomingConferences/></>}/>
           <Route path="/chat" element={<Chat/>}/>
+          <Route path="/research" element={<Papers/>}/>
         </Routes>
     </Router>
   );

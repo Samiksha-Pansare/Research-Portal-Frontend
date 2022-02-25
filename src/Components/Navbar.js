@@ -1,11 +1,39 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import '../Css/Navbar.css';
 
 export default class Navbar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { navColor: false};
+        this.handlescrollbar = this.handlescrollbar.bind(this);
+      }
+    
+     handlescrollbar() {
+      if(window.scrollY >= 80){
+        this.setState({ navColor: true });
+        console.log("Function working");
+      }
+      else{
+        this.setState({ navColor: false });
+      }
+     };
   render() {
+    const { scrollstatus } = this.state;
+    // const Navbar = () => {
+    //     const [colorChange, setColorchange] = useState(false);
+    //     const changeNavbarColor = () =>{
+    //        if(window.scrollY >= 80){
+    //          setColorchange(true);
+    //        }
+    //        else{
+    //          setColorchange(false);
+    //        }
+    //     };
+    //     window.addEventListener('scroll', changeNavbarColor);
+    // } 
     return (
       <>
-      <nav className="navbar fixed-top navbar-expand-lg navbar-light ">
+      <nav className="navbar fixed-top navbar-expand-lg navbar-light "  style={{background: (scrollstatus==='true') ? '#f8f4fa' : 'url("../Images/bg-color.png")' }} >
         <div className="container-fluid">
             <a className="navbar-brand" href="#">Research Portal</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

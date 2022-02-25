@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+html {
+	scroll-behavior: smooth !important;
+  
+  }
+  
+  
+  body    {overflow-y:scroll !important;}
 .navbar 
 {
-	background-color:#f8f4fa ;
+	background-color:#f8f4fa;
 }
 .navbar-btn
 {
