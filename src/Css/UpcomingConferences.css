@@ -77,7 +77,7 @@ body {
 ====================================== */
 .messages-page {
   height: max-content !important;
-  padding-top: 65px;
+  padding-top: 100px;
 }
 .messages-page__header {
   display: flex;
@@ -112,7 +112,7 @@ body {
 }
 .messages-page__list-scroll {
   
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   overflow-x: hidden;
   position: relative;
   display: flex;

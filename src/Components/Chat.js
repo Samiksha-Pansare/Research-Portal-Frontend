@@ -39,20 +39,20 @@ export default class Chat extends Component {
     return (  
      
       <>
-      <div className="home-page__content messages-page">
+      <div className="home-page__content msg-page">
         <div className="container-fluid h-100">
             <div className="row px-0 h-100">
-            <div className="col-md-4 px-0 messages-page__list-scroll"  style={{display: (this.state.chatlist==='dontshow') ? 'none' : 'block' }}>
+            <div className="col-md-4 px-0 msg-page__list-scroll"  style={{display: (this.state.chatlist==='dontshow') ? 'none' : 'block' }}>
 
-                <div className="messages-page__header mb-0 px-4 pt-3 pb-3">
-                <span className="messages-page__title">Chats</span>
-                <div className="messages-page__dark-mode-toogler">
+                <div className="msg-page__header mb-0 px-4 pt-3 pb-3">
+                <span className="msg-page__title">Chats</span>
+                <div className="msg-page__dark-mode-toogler">
                     <svg xmlns="http://www.w3.org/2000/svg" className="svg-icon svg-icon--dark-mode" viewBox="0 0 49.7 49.7">
                     <path d="M25.4,49.7A25.6,25.6,0,0,1,1.3,32.3,25.6,25.6,0,0,1,17.3.1a2,2,0,0,1,2.1.5,2.2,2.2,0,0,1,.5,2.1,19.9,19.9,0,0,0-1.2,6.8A21,21,0,0,0,25,24.7,21,21,0,0,0,40.2,31h0a20.9,20.9,0,0,0,6.9-1.2,2,2,0,0,1,2.5,2.5,25.8,25.8,0,0,1-16,16.1A28.7,28.7,0,0,1,25.4,49.7ZM15,5.5A21.4,21.4,0,0,0,5.1,31.1,21.5,21.5,0,0,0,15.9,43.4a21.2,21.2,0,0,0,28.3-8.8,17.5,17.5,0,0,1-4,.4h0a24.9,24.9,0,0,1-18-7.5,24.9,24.9,0,0,1-7.5-18A26.9,26.9,0,0,1,15,5.5Z" fill="#f68b3c" />
                     </svg>
                 </div>
                 </div>
-                <div className="messages-page__search mb-0 px-3 pb-3">
+                <div className="msg-page__search mb-0 px-3 pb-3">
                 <div className="custom-form__search-wrapper">
                     <input type="text" className="form-control custom-form" id="search" placeholder="Rechercher un message, un utilisateur…" autoComplete="off"/>
                     <button type="submit" className="custom-form__search-submit">
@@ -63,104 +63,104 @@ export default class Chat extends Component {
                 </div>
                 </div>
 
-                <ul className="messages-page__list pb-5 px-1 px-md-3">
-                <li className="messaging-member messaging-member--new messaging-member--online" onClick={this.showChat}>
-                    <div className="messaging-member__wrapper">
-                    <div className="messaging-member__avatar">
+                <ul className="msg-page__list pb-5 px-1 px-md-3">
+                <li className="msging-member msging-member--new msging-member--online" onClick={this.showChat}>
+                    <div className="msging-member__wrapper">
+                    <div className="msging-member__avatar">
                         <img src="https://randomuser.me/api/portraits/thumb/men/74.jpg" alt="Bessie Cooper" loading="lazy"/>
                         <div className="user-status"></div>
                     </div>
 
-                    <span className="messaging-member__name">Bessie Cooper</span>
-                    <span className="messaging-member__message">Yes, I need your help with the project, it need it done by tomorrow 😫</span>
+                    <span className="msging-member__name">Bessie Cooper</span>
+                    <span className="msging-member__message">Yes, I need your help with the project, it need it done by tomorrow 😫</span>
                     </div>
                 </li>
-                <li className="messaging-member messaging-member--online messaging-member--active">
-                    <div className="messaging-member__wrapper">
-                    <div className="messaging-member__avatar">
+                <li className="msging-member msging-member--online msging-member--active">
+                    <div className="msging-member__wrapper">
+                    <div className="msging-member__avatar">
                         <img src="https://randomuser.me/api/portraits/thumb/women/56.jpg" alt="Jenny Smith" loading="lazy"/>
                         <div className="user-status"></div>
                     </div>
 
-                    <span className="messaging-member__name">Jenny Smith</span>
-                    <span className="messaging-member__message">Perfect, thanks !</span>
+                    <span className="msging-member__name">Jenny Smith</span>
+                    <span className="msging-member__message">Perfect, thanks !</span>
                     </div>
                 </li>
-                <li className="messaging-member">
-                    <div className="messaging-member__wrapper">
-                    <div className="messaging-member__avatar">
+                <li className="msging-member">
+                    <div className="msging-member__wrapper">
+                    <div className="msging-member__avatar">
                         <img src="https://randomuser.me/api/portraits/thumb/women/17.jpg" alt="Courtney Simmons" loading="lazy"/>
                         <div className="user-status"></div>
                     </div>
 
-                    <span className="messaging-member__name">Courtney Simmons</span>
-                    <span className="messaging-member__message">Going home soon, don't worry</span>
+                    <span className="msging-member__name">Courtney Simmons</span>
+                    <span className="msging-member__message">Going home soon, don't worry</span>
                     </div>
                 </li>
-                <li className="messaging-member messaging-member--online">
-                    <div className="messaging-member__wrapper">
-                    <div className="messaging-member__avatar">
+                <li className="msging-member msging-member--online">
+                    <div className="msging-member__wrapper">
+                    <div className="msging-member__avatar">
                         <img src="https://randomuser.me/api/portraits/thumb/women/39.jpg" alt="Martha Curtis" loading="lazy"/>
                         <div className="user-status"></div>
                     </div>
 
-                    <span className="messaging-member__name">Martha Curtis</span>
-                    <span className="messaging-member__message">Great 😂</span>
+                    <span className="msging-member__name">Martha Curtis</span>
+                    <span className="msging-member__message">Great 😂</span>
                     </div>
                 </li>
-                <li className="messaging-member messaging-member--online">
-                    <div className="messaging-member__wrapper">
-                    <div className="messaging-member__avatar">
+                <li className="msging-member msging-member--online">
+                    <div className="msging-member__wrapper">
+                    <div className="msging-member__avatar">
                         <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg" alt="Rozie Tucker" loading="lazy"/>
                         <div className="user-status"></div>
                     </div>
 
-                    <span className="messaging-member__name">Gab Ryan</span>
-                    <span className="messaging-member__message">Sure, may I get your phone number? 😃</span>
+                    <span className="msging-member__name">Gab Ryan</span>
+                    <span className="msging-member__message">Sure, may I get your phone number? 😃</span>
                     </div>
                 </li>
-                <li className="messaging-member">
-                    <div className="messaging-member__wrapper">
-                    <div className="messaging-member__avatar">
+                <li className="msging-member">
+                    <div className="msging-member__wrapper">
+                    <div className="msging-member__avatar">
                         <img src="https://randomuser.me/api/portraits/thumb/men/17.jpg" alt="Jules Zimmermann" loading="lazy"/>
                         <div className="user-status"></div>
                     </div>
 
-                    <span className="messaging-member__name">Jules Zimmermann</span>
-                    <span className="messaging-member__message">Well, here I am, coming as faaast as I can !</span>
+                    <span className="msging-member__name">Jules Zimmermann</span>
+                    <span className="msging-member__message">Well, here I am, coming as faaast as I can !</span>
                     </div>
                 </li>
-                <li className="messaging-member">
-                    <div className="messaging-member__wrapper">
-                    <div className="messaging-member__avatar">
+                <li className="msging-member">
+                    <div className="msging-member__wrapper">
+                    <div className="msging-member__avatar">
                         <img src="https://randomuser.me/api/portraits/thumb/men/9.jpg" alt="Mark Reid" loading="lazy"/>
                         <div className="user-status"></div>
                     </div>
 
-                    <span className="messaging-member__name">Mark Reid</span>
-                    <span className="messaging-member__message">Have you listened to the latest album? Pure perfection</span>
+                    <span className="msging-member__name">Mark Reid</span>
+                    <span className="msging-member__message">Have you listened to the latest album? Pure perfection</span>
                     </div>
                 </li>
-                <li className="messaging-member  messaging-member--online">
-                    <div className="messaging-member__wrapper">
-                    <div className="messaging-member__avatar">
+                <li className="msging-member  msging-member--online">
+                    <div className="msging-member__wrapper">
+                    <div className="msging-member__avatar">
                         <img src="https://randomuser.me/api/portraits/thumb/men/54.jpg" alt="Russell Williams" loading="lazy"/>
                         <div className="user-status"></div>
                     </div>
 
-                    <span className="messaging-member__name">Russell Williams</span>
-                    <span className="messaging-member__message">Nice to meet you again </span>
+                    <span className="msging-member__name">Russell Williams</span>
+                    <span className="msging-member__message">Nice to meet you again </span>
                     </div>
                 </li>
-                <li className="messaging-member">
-                    <div className="messaging-member__wrapper">
-                    <div className="messaging-member__avatar">
+                <li className="msging-member">
+                    <div className="msging-member__wrapper">
+                    <div className="msging-member__avatar">
                         <img src="https://randomuser.me/api/portraits/thumb/women/85.jpg" alt="Savannah Nguyen" loading="lazy"/>
                         <div className="user-status"></div>
                     </div>
 
-                    <span className="messaging-member__name">Savannah Nguyen</span>
-                    <span className="messaging-member__message">Really ?!</span>
+                    <span className="msging-member__name">Savannah Nguyen</span>
+                    <span className="msging-member__message">Really ?!</span>
                     </div>
                 </li>
                 </ul>
@@ -168,7 +168,7 @@ export default class Chat extends Component {
             <div className={`chat col-md-8  ${isMobile === 'true'  ? 'chat--show' : 'null'}`} style={{display: (this.state.chatDetail==='show') ? 'block' : 'none' }}>
                 <div className="chat__container">
                 <div className="chat__wrapper py-2 pt-mb-2 pb-md-3">
-                    <div className="chat__messaging messaging-member--online pb-2 pb-md-2 pl-2 pl-md-4 pr-2">
+                    <div className="chat__msging msging-member--online pb-2 pb-md-2 pl-2 pl-md-4 pr-2">
                     <div className="chat__previous d-flex d-md-none" onClick={this.goBack}>
                         <svg xmlns="http://www.w3.org/2000/svg" className="svg-icon svg-icon--previous" viewBox="0 0 45.5 30.4">
                         <path d="M43.5,13.1H7l9.7-9.6A2.1,2.1,0,1,0,13.8.6L.9,13.5h0L.3,14v.6c0,.1-.1.1-.1.2v.4a2,2,0,0,0,.6,1.5l.3.3L13.8,29.8a2.1,2.1,0,1,0,2.9-2.9L7,17.2H43.5a2,2,0,0,0,2-2A2.1,2.1,0,0,0,43.5,13.1Z" fill="#f68b3c" />
@@ -216,7 +216,7 @@ export default class Chat extends Component {
                     </div>
                     </div>
                     <div className="chat__content pt-4 px-3">
-                    <ul className="chat__list-messages">
+                    <ul className="chat__list-msg">
                         <li>
                         <div className="chat__time">Yesterday at 16:43</div>
                         <div className="chat__bubble chat__bubble--you">

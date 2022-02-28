@@ -77,25 +77,26 @@ body {
 /* ===================================
     Main
 ====================================== */
-.messages-page {
-  height: 100vh;
+.msg-page {
+  height: max-content !important;
+  padding-top: 100px;
 }
-.messages-page__header {
+.msg-page__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.messages-page__title {
+.msg-page__title {
   color: var(--colour-text-darker);
   font-weight: bold;
   font-size: 1.5rem;
 }
 @media screen and (max-width: 1199px) {
-  .messages-page__title {
+  .msg-page__title {
     font-size: 1.5rem;
   }
 }
-.messages-page__dark-mode-toogler {
+.msg-page__dark-mode-toogler {
   width: 2.6rem;
   height: 2.6rem;
   padding: 0.35rem;
@@ -106,25 +107,26 @@ body {
   justify-content: center;
   align-items: center;
 }
-.messages-page__dark-mode-toogler:hover {
+.msg-page__dark-mode-toogler:hover {
   background-color: var(--colour-primary);
   border-color: var(--colour-primary);
 }
-.messages-page__dark-mode-toogler:hover path {
+.msg-page__dark-mode-toogler:hover path {
   fill: var(--bg-page-darker);
 }
-.messages-page__list {
+.msg-page__list {
   list-style: none;
+  height: 60vh;
   flex-grow: 1;
-  overflow-y: auto;
+  overflow-y:scroll;
 }
-.messages-page__list-scroll {
-  height: 100%;
-  overflow: hidden;
+.msg-page__list-scroll {
+  overflow-x: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 }
 
 .custom-form {
@@ -255,37 +257,37 @@ body {
   align-items: center;
 }
 
-.messaging-member {
+.msging-member {
   border-radius: var(--form-radius);
 }
-.messaging-member:hover {
+.msging-member:hover {
   background-color: var(--bg-page-darker);
 }
-.messaging-member--new .messaging-member__name {
+.msging-member--new .msging-member__name {
   color: var(--colour-text-darker);
 }
-.messaging-member--new .messaging-member__message {
+.msging-member--new .msging-member__message {
   color: var(--colour-text-darker);
   font-weight: bold;
 }
-.messaging-member--online .user-status {
+.msging-member--online .user-status {
   background-color: var(--colour-third-lighter);
 }
-.messaging-member--active {
+.msging-member--active {
   background-color: var(--colour-primary-lightest);
 }
-.messaging-member--active:hover {
+.msging-member--active:hover {
   background-color: var(--colour-primary-lightest);
 }
 @media screen and (max-width: 767px) {
-  .messaging-member--active {
+  .msging-member--active {
     background-color: var(--bg-page);
   }
-  .messaging-member--active:hover {
+  .msging-member--active:hover {
     background-color: var(--bg-page-darker);
   }
 }
-.messaging-member__wrapper {
+.msging-member__wrapper {
   cursor: pointer;
   padding: 0.5rem 1rem;
   border-radius: var(--form-radius);
@@ -297,33 +299,33 @@ body {
   grid-template-areas: "avatar     name" "avatar     message";
 }
 @media screen and (max-width: 1199px) {
-  .messaging-member__wrapper {
+  .msging-member__wrapper {
     grid-template-columns: 3.5rem 1fr;
     grid-template-rows: 1.75rem 1.75rem;
   }
 }
 @media screen and (max-width: 991px) {
-  .messaging-member__wrapper {
+  .msging-member__wrapper {
     grid-template-columns: 3.2rem 1fr;
     grid-template-rows: 1.75rem 1.75rem;
   }
 }
-.messaging-member__avatar {
+.msging-member__avatar {
   grid-area: avatar;
   position: relative;
 }
-.messaging-member__avatar img {
+.msging-member__avatar img {
   border-radius: 50%;
   width: 100%;
 }
-.messaging-member__name {
+.msging-member__name {
   font-weight: bold;
   grid-area: name;
   color: var(--colour-text-darker);
   margin-top: auto;
   font-size: 0.9rem;
 }
-.messaging-member__message {
+.msging-member__message {
   grid-area: message;
   white-space: nowrap;
   word-break: break-word;
@@ -337,7 +339,7 @@ body {
   width: 100%;
 } */
 .chat__container {
-  height: 100%;
+  height: 80vh !important;
   width: 100%;
 }
 .chat__wrapper {
@@ -358,7 +360,7 @@ body {
     border-right: none;
   }
 }
-.chat__messaging {
+.chat__msging {
   width: 100%;
   border-bottom: 1px solid var(--border-color);
   display: flex;
@@ -431,20 +433,20 @@ body {
   flex-grow: 1;
   overflow-y: auto;
 }
-.chat__list-messages {
+.chat__list-msg {
   list-style: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
-.chat__list-messages li {
+.chat__list-msg li {
   margin-bottom: 0.7rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
-.chat__list-messages li .chat__bubble {
+.chat__list-msg li .chat__bubble {
   margin-bottom: 0.2rem;
 }
 .chat__bubble {

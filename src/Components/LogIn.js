@@ -1,8 +1,6 @@
 import React, {useState,Component} from 'react';
 import  Register from '../Images/register.svg';
 import Log from '../Images/log.svg';
-
-
 import '../Css/login.css';
 
 export default class LogIn extends Component {

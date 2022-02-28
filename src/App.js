@@ -21,8 +21,8 @@ function App() {
           <Route exact path="/" element={<><Indexbody/><Footer/></>}/>
           <Route exact path="/login" element={<LogIn/>}/>
           <Route exact path="/upcomingconf" element={<><Navbar/><UpcomingConferences/></>}/>
-          <Route path="/chat" element={<Chat/>}/>
-          <Route path="/research" element={<Papers/>}/>
+          <Route exact path="/chat" element={<><Navbar/><Chat/></>}/>
+          <Route exact path="/research" element={<><Navbar/><Papers/><Footer/></>}/>
         </Routes>
     </Router>
   );
